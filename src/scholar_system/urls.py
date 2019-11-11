@@ -1,5 +1,4 @@
 """scholar_system URL Configuration
-
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/2.2/topics/http/urls/
 Examples:
@@ -19,14 +18,17 @@ from django.urls import path
 
 urlpatterns = [
     path('', views.index, name='index'),
-    path('signInSubmit/', views.signInSubmit),
-    path('landingPage/', views.landingPage, name='landingPage'),
-    path('logoutSubmit', views.logoutSubmit, name='logoutSubmit'),
-    path('createProject', views.createproject, name='createProject'),
-    path('signup', views.signup, name='signup'),
-    path('projectPage/<project>', views.projectPage, name='projectPage'),
-    path('projectPage/', views.projectPage, name='projectPage'),
-    path('logoutSubmit', views.logoutSubmit, name='logoutSubmit'),
-    path('createproject/', views.createproject, name='createproject'),
+    path('signinsubmit/', views.signInSubmit),
+    path('landingpage/', views.landingPage, name='landingpage'),
+    path('logoutsubmit', views.logoutSubmit, name='logoutsubmit'),
+    path('createproject', views.createproject, name='createProject'),
+    path('signup/', views.signup, name='signup'),
+    path('projectpage/<project>', views.projectPage, name='projectPage'),
+    path('projectpage/', views.projectPage, name='projectPage'),
+    path('projectlisting/', views.projectList, name='projectList'),
+    path('createproject/', views.createproject, name    ='createproject'),
+    path('projectlistcard/', views.projectListCard, name='projectListCard'),
+    path('creatingproject', views.createProjectSubmit, name='createProjectSubmit'),
+    path('signupsubmit', views.signUpSubmit),
     path('404/', views.pageNotFound, name='404'),
 ]
